@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLAMES</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="flames.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Light&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        background: #a93c49;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin: 0 auto;
+      }
+      .resp_code {
+        background: #feeec5;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        border: 2px solid black;
+      }
+      .resp_code h2 {
+        font-family: "Love Light", cursive;
+        font-size: 50px;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .resp_code .love {
+        background-color: beige;
+        border: none;
+      }
+      .resp_code .but_por {
+        background-color: beige;
+      }
+      .resp_code .group {
+        background-color: beige;
+      }
+      .resp_code b {
+        font-family: "Special Elite", system-ui;
+        color: #a93c49;
+      }
+      .but_por .buttonMini {
+        background-color: #a93c49; /* default color */
+        color: black; /* text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+      }
+      .but_por button {
+        background-color: #a93c49; /* default color */
+        color: black; /* text color */
+      }
+      .resp_code .buttonMini:hover {
+        background-color: #feeec5; /* hover color */
+        color: #a93c49; /* text color */
+      }
+      .txt {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .txt:focus {
+        border-color: #a93c49;
+        box-shadow: 0 0 5px #a93c49;
+      }
+
+      @media (max-width: 700px) {
+        /* Styles for tablets and larger screens */
+        .resp_code {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .group {
+          flex-basis: 48%;
+        }
+
+        .buttonMini {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resp_code" style="margin-top: 100px">
+      <div align="center"><h2>FLAMES</h2></div>
+      <form name="first">
+        <div class="love" id="maindiv">
+          <div class="group" style="padding: 15px">
+            <div class="p_name group">
+              <b>Your Name</b>
+              <input
+                value=""
+                name="name"
+                onkeyup="checnum(this)"
+                type="text"
+                class="txt"
+                id="yname"
+              />
+            </div>
+            <br />
+            <div class="group p_name" align="center">
+              <b>Lover's Name </b>
+              <input
+                value=""
+                name="name1"
+                onkeyup="checnum(this)"
+                type="text"
+                class="txt"
+                id="pname"
+              />
+            </div>
+            <div name="n1" id="nam1"></div>
+            <div style="font-weight: bold" id="msg"></div>
+          </div>
+          <div class="but_por">
+            <input
+              name="calculate"
+              type="button"
+              value="FLAMES"
+              onclick="calc()"
+              class="buttonMini"
+            />
+            <input
+              type="reset"
+              value="Reset"
+              onclick="window.location.reload()"
+              class="buttonMini"
+            />
+            <span
+              align="center"
+              style="font-size: 10px; color: #dadada"
+              id="dumdiv"
+            >
+            </span>
+          </div>
+        </div>
+
+        <div id="tablid" class="clearfix">
+          <div class="group" align="center">
+            <div class="love_result">
+              <span name="n1" id="nam1"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
